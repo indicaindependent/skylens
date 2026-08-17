@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+wrangler.toml
+!wrangler.toml.example
+*.db
+*.sqlite
+node_modules/
+.wrangler/
+dist/
+.DS_Store

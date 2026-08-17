@@ -1,0 +1,21 @@
+# SkyLens — Cloudflare Worker config (example). Copy to wrangler.toml and fill in.
+name = "skylens"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# Custom domain route (optional)
+# routes = [{ pattern = "skylens.example.com", custom_domain = true }]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "skylens-db"
+database_id = "<your-d1-database-id>"   # `wrangler d1 create skylens-db`
+
+[vars]
+TRACKED_ACTORS = "you.bsky.social,friend.bsky.social"  # comma-separated handles to ingest
+FEATURED_ACTOR = "you.bsky.social"                      # default actor for the dashboard
+
+# Secrets (set with `wrangler secret put <NAME>` — NEVER commit real values):
+#   TELEGRAM_BOT_TOKEN   (optional) daily digest / alerts
+#   TELEGRAM_CHAT_ID     (optional) where alerts go
+#   INGEST_KEY           protects the manual backfill trigger
