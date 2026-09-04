@@ -1,4 +1,4 @@
-# SkyLens 🛰️
+# SkyLens
 
 **An open-source engagement-analytics observatory for Bluesky / the AT Protocol.**
 Timing heatmaps, a golden-hour finder, thread-shape analysis, and fan-loyalty signals — served from a single Cloudflare Worker.
